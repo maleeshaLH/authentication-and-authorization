@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth
+    username: root
+    password: Ijse@1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#  jwt:
+#    secret: "thisIsA32CharMinSecretKeyForJwt!!!"
+#    expirationMs: 900000       # 15 minutes for access token
+#    refreshExpirationMs: 604800000 # 7 days for refresh token
+jwt:
+    secret: "thisIsA32CharMinSecretKeyForJwtToken123"
+    access-expiration-ms: 3600000
+    refresh-expiration-ms: 86400000
+
+server:
+  port: 8080
